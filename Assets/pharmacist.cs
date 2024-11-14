@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.ShaderGraph.Internal;
+//using System.Runtime.InteropServices.WindowsRuntime;
+//using Unity.VisualScripting;
+//using UnityEditor;
+//using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using UnityEngine.AI;
+//using UnityEngine.AI;
 
 public class pharmacist : MonoBehaviour
 {
@@ -27,6 +27,8 @@ public class pharmacist : MonoBehaviour
     
     [SerializeField] projectileLauncher projectilelauncher;
     [SerializeField] TrailRenderer tr;
+    [SerializeField] AudioSource shooitingAudio;
+    [SerializeField] AudioSource damageAudio;
     
     [Header("Destroy")]
     public SpriteRenderer playerSR;
@@ -93,6 +95,7 @@ public class pharmacist : MonoBehaviour
 
     public void launchNeedle(){
         projectilelauncher.Launch();
+        shooitingAudio.Play();
     }
 
     public void Dash(){
@@ -167,6 +170,7 @@ public class pharmacist : MonoBehaviour
     public void TakeDamage(){
 
         currentHealth -= 1;
+        damageAudio.Play();
         //kill player
         //Debug.Log("Player's current health: " + currentHealth);
         if(currentHealth <= 0){

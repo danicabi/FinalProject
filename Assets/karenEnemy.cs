@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEditor.Tilemaps;
+//using System.ComponentModel;
+//using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.Timeline;
+//using UnityEngine.Timeline;
 
 public class karenEnemy : MonoBehaviour
 {

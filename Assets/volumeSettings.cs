@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Rendering;
+//using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class volumeSettings : MonoBehaviour
