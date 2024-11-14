@@ -1893,6 +1893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mtech3
       objectReference: {fileID: 0}
+    - target: {fileID: 5223109805785233001, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5304880338578234539, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -4804,6 +4808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ftech2
       objectReference: {fileID: 0}
+    - target: {fileID: 5223109805785233001, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5304880338578234539, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6468,6 +6476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mtech1
       objectReference: {fileID: 0}
+    - target: {fileID: 5223109805785233001, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5304880338578234539, guid: f12f7aa2a9e49df458d223812c3bb215, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -7324,6 +7336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: karen1
       objectReference: {fileID: 0}
+    - target: {fileID: 119057505134063660, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 134722191703672298, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
       propertyPath: speed
       value: 2
@@ -7374,7 +7390,7 @@ PrefabInstance:
       objectReference: {fileID: 283800946}
     - target: {fileID: 859189571439870878, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
       propertyPath: sightDistance
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2814882187387534570, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
       propertyPath: m_Constraints
@@ -10248,7 +10264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728421897}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12396,7 +12412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913079504}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14448,7 +14464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128350403}
   - component: {fileID: 1128350402}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemyLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18541,6 +18557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: terry1
       objectReference: {fileID: 0}
+    - target: {fileID: 119057505134063660, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 134722191703672298, guid: c79aba23aa9ea784cbda7041bbb6ce44, type: 3}
       propertyPath: speed
       value: 2
@@ -19171,7 +19191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1528496786}
   - component: {fileID: 1528496787}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19852,7 +19872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1580272891}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21881,7 +21901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795405778}
   - component: {fileID: 1795405777}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemyLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22918,7 +22938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900609700}
   - component: {fileID: 1900609701}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: wallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23473,7 +23493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1958039915}
   - component: {fileID: 1958039914}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: enemyLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25460,6 +25480,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 667850670251462369, guid: 5024b36e28f94af4f93886632fdcf00e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6266149
+      objectReference: {fileID: 0}
+    - target: {fileID: 667850670251462369, guid: 5024b36e28f94af4f93886632fdcf00e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07728797
+      objectReference: {fileID: 0}
     - target: {fileID: 3310299298830244697, guid: 5024b36e28f94af4f93886632fdcf00e, type: 3}
       propertyPath: m_Name
       value: pharmisit
@@ -25486,7 +25514,7 @@ PrefabInstance:
       objectReference: {fileID: 283800947}
     - target: {fileID: 4883394016947866958, guid: 5024b36e28f94af4f93886632fdcf00e, type: 3}
       propertyPath: groundLayer.m_Bits
-      value: 448
+      value: 1472
       objectReference: {fileID: 0}
     - target: {fileID: 5633202218711713779, guid: 5024b36e28f94af4f93886632fdcf00e, type: 3}
       propertyPath: m_LocalPosition.x
