@@ -35,6 +35,9 @@ public class healthDisplay : MonoBehaviour
         //Debug.Log("Player's current health: " + health);
         maxHealth = player.maxHealth;
         health = player.currentHealth;
+        if(health > maxHealth){
+            health = maxHealth;
+        }
         for(int i = 0; i < hearts.Length; i++){
 
             if(i < health){

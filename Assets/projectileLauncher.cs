@@ -37,5 +37,21 @@ public class projectileLauncher : MonoBehaviour
         Destroy(newProjectile,3f);
     }
 
-    
+     public void ModifySpeedTemporary(float newSpeed, float duration)
+    {
+        //StopAllCoroutines(); // Ensure no other speed-changing coroutines are running
+        StartCoroutine(TempSpeedChange(newSpeed, duration));
+        
+        IEnumerator TempSpeedChange(float newSpeed, float duration){
+            float originalSpeed = projectileSpeed;
+            projectileSpeed = newSpeed;
+            //Debug.Log($"Player speed changed to: {player.speed}");
+
+            yield return new WaitForSeconds(duration);
+
+            projectileSpeed = originalSpeed;
+            //Debug.Log("Player speed reverted to original: " + player.speed);
+    }
+
+    }
 }

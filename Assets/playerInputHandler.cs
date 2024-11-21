@@ -6,6 +6,7 @@ public class playerInputHandler : MonoBehaviour
 {
     
     [SerializeField] pharmacist player;
+    [SerializeField] pauseMenu p;
 
     private float horizontal;
 
@@ -36,6 +37,10 @@ public class playerInputHandler : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.LeftShift) && player.canDash){
             player.Dash();
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            p.Pause();
         }
 
         // Flip character based on movement direction

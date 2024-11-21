@@ -147,25 +147,25 @@ public class pharmacist : MonoBehaviour
 
         if(other.CompareTag("Enemy") && !isDashing || other.CompareTag("pill")){
             TakeDamage();
-            //play sound
+            
         }
 
         if(other.CompareTag("instant death") ){
             Debug.Log("falling");
             currentHealth = currentHealth - 5;
             TakeDamage();
-            //play sound
+            
         }
         
     }
 
-    public float playersHealth(){
-        return currentHealth;
+    public void setandcheckHealth(float health){
+        if(health > maxHealth){
+            health = maxHealth;
+        }
+         currentHealth = health;
     }
 
-    public void setPlayerHealth(){
-        
-    }
 
     public void TakeDamage(){
 
@@ -195,6 +195,71 @@ public class pharmacist : MonoBehaviour
         //gameObject.SetActive(false);
         Destroy(this.gameObject);
     }
+
+    public void ModifySpeedTemporary(float newSpeed, float duration)
+    {
+        StartCoroutine(TempSpeedChange(newSpeed, duration));
+        
+        IEnumerator TempSpeedChange(float newSpeed, float duration){
+            float originalSpeed = speed;
+            speed = newSpeed;
+            //Debug.Log($"Player speed changed to: {player.speed}");
+
+            yield return new WaitForSeconds(duration);
+
+            speed = originalSpeed;
+            //Debug.Log("Player speed reverted to original: " + player.speed);
+    }
+
+    }
+
+    public void ModifyJumpPowerTemporary(float newJumpPow, float duration)
+    {
+        StartCoroutine(TempJumpChange(newJumpPow, duration));
+        
+        IEnumerator TempJumpChange(float newJumpPow, float duration){
+            float originalJump = jumpingPower;
+            jumpingPower = newJumpPow;
+            //Debug.Log($"Player speed changed to: {player.speed}");
+
+            yield return new WaitForSeconds(duration);
+
+            jumpingPower = originalJump;
+            //Debug.Log("Player speed reverted to original: " + player.speed);
+        }  
+    } 
+
+    public void ModifyDashPowerTemporary(float newDashPow, float duration)
+    {
+        StartCoroutine(TempDashChange(newDashPow, duration));
+        
+        IEnumerator TempDashChange(float newDashPow, float duration){
+            float originalDash = dashingPower;
+            dashingPower = newDashPow;
+            //Debug.Log($"Player speed changed to: {player.speed}");
+
+            yield return new WaitForSeconds(duration);
+
+            dashingPower = originalDash;
+            //Debug.Log("Player speed reverted to original: " + player.speed);
+        }  
+    } 
+
+    public void ModifyDashTimeTemporary(float newDashTime, float duration)
+    {
+        StartCoroutine(TempDashTimeChange(newDashTime, duration));
+        
+        IEnumerator TempDashTimeChange(float newDashTime, float duration){
+            float originalDashTime = dashingTime;
+            dashingTime = newDashTime;
+            //Debug.Log($"Player speed changed to: {player.speed}");
+
+            yield return new WaitForSeconds(duration);
+
+            dashingTime = originalDashTime;
+            //Debug.Log("Player speed reverted to original: " + player.speed);
+        }  
+    } 
 
 
     
