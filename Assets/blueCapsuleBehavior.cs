@@ -12,11 +12,11 @@ public class blueCapsuleBehavior : MonoBehaviour
     
 
     public void OnTriggerEnter2D(Collider2D other){
-        projectileLauncher gun = other.GetComponent<projectileLauncher>();
+        pharmacist player = other.GetComponent<pharmacist>();
         if(other.CompareTag("Player") ){
 
             float randomSpeed = Random.Range(minSpeed, maxSpeed);
-            gun.ModifySpeedTemporary(randomSpeed,duration);
+            player.changeProjectileSpeed(randomSpeed,duration);
             Destroy(gameObject);
             
         }

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
+
 //using System.Runtime.InteropServices.WindowsRuntime;
 //using Unity.VisualScripting;
 //using UnityEditor;
@@ -153,10 +155,16 @@ public class pharmacist : MonoBehaviour
         if(other.CompareTag("instant death") ){
             Debug.Log("falling");
             currentHealth = currentHealth - 5;
-            TakeDamage();
+            InstantDeath();
             
         }
         
+    }
+
+    public void InstantDeath(){
+        playerSR.enabled = false;
+        playermvoemtn.enabled = false;
+        PlayerDied();
     }
 
     public void setandcheckHealth(float health){
@@ -260,6 +268,11 @@ public class pharmacist : MonoBehaviour
             //Debug.Log("Player speed reverted to original: " + player.speed);
         }  
     } 
+
+    public void changeProjectileSpeed(float newspeed, float duration){
+
+        projectilelauncher.ModifySpeedTemporary(newspeed,duration);
+    }
 
 
     
