@@ -12,7 +12,7 @@ public class orageCapsuleBehavior : MonoBehaviour
         pharmacist player = other.GetComponent<pharmacist>();
         if(other.CompareTag("Player") ){
 
-            player.setandcheckHealth(player.currentHealth++);
+            player.setandcheckHealth(player.currentHealth + 1);
             Destroy(gameObject);
             
         }
